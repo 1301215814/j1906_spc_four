@@ -1,0 +1,21 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: service-dept-p
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myrbac?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    password:
+    username: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+eureka:
+  client:
+    service-url:
+      dedaultZone: http://localhost:8761/eureka
+
+mybatis:
+  type-aliases-package: com.qf.j19106.pojo
+  mapper-locations: classpath*:mapping/*.xml
